@@ -10,4 +10,11 @@
             }
         </style>
     </HyperLazyLoad>
+    <HyperLazyLoad type="image" src="/img.jpg" baseSrc="/img-com.jpg" props={{class: "flex-end", id: "kd"}}>
+        <style>
+            #kd {
+                filter: blur(50%);
+            }
+        </style>
+    </HyperLazyLoad>
 </div>

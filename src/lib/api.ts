@@ -3,6 +3,7 @@ export class Identifier {
 
     public getNewId() {
         const base = sessionStorage.getItem("lazy#id") || undefined;
+        console.log("a1", base)
 
         if (!base) {
             this.id = 1;
@@ -22,6 +23,7 @@ export class Identifier {
     }
 
     protected save() {
-        sessionStorage.setItem("lazy#id", String(this.id || 0))
+        const id = this.id;
+        sessionStorage.setItem("lazy#id", String(id || 0))
     }
 }

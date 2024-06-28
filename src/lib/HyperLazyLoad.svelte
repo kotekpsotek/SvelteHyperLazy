@@ -49,9 +49,6 @@
     onMount(() => {
         const identifierInstc = new Identifier();
 
-        // Remove last Identifier when exists
-        identifierInstc.reset();
-        
         // Root functionality from here to bottom
         id = `lid-${identifierInstc.getNewId()}`;
         let fullElement: HTMLImageElement | HTMLVideoElement = createFullVersionElement(id);
