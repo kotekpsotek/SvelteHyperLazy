@@ -1,6 +1,9 @@
 # SvelteHyperLazy
 Is a enhanced lazy load package desired for Svelte; Allow lazy load images and videos
 
+# Worth to note!
+I'm seeking a volountiers to help me in leading this project to finish. When you're brave, strong, remarkable programmer you can contact with me here: [Short Application](https://forms.gle/QRjhGXnq4CuDE4P48)
+
 ## Points for use our solution
 1. Allows to use Lazy Loading for images and videos
 2. Has option to add **base image** which should be a smaller image displaying before full version had loaded
@@ -10,7 +13,7 @@ Is a enhanced lazy load package desired for Svelte; Allow lazy load images and v
 
 ### **Information:** We are decent so we're gaining each level in descending order  (From Basic to Advanced)
 
-***Basic***
+***Basic*** (Achieved)
 1. Show empty element until base element won't be attached
 2. Load full element only when user is seeing an element
 
