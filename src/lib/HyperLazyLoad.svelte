@@ -85,3 +85,4 @@
 {:else}
     <img {...props} src="{baseSrc ? baseSrc : ""}" alt="" data-lid={id}>
 {/if}
+<slot/>
