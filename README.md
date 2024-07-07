@@ -1,3 +1,6 @@
+## Warning: ##
+This repository isn't continuing. Actual version is here: 
+
 # SvelteHyperLazy
 Is a enhanced lazy load package desired for Svelte; Allow lazy load images and videos
 
