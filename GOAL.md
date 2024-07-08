@@ -17,3 +17,6 @@
 ```
 
 **Description for this above:** The idea is that target user should make a files containing this **content_id** (files with names following specific pattern) and these files have a Svelte code and this svelte code should be delivering by REST API in placed in referring `<HyperLazy/>` element. Example:
+
+# !!How to achieve these orders?
+- We can make this through vite-plugin  [Vite Plugin API](https://vitejs.dev/guide/api-plugin)
