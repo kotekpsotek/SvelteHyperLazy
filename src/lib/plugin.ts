@@ -10,7 +10,7 @@ type SvelteFilesList = string[]
  * @param {string} filePath - the absolute location of svelte file
  * Returns svelte file as abst
 */
-function svelteSyntaxParser(filePath: string, encoding: BufferEncoding = "utf-8"): HTMLElement[] {
+export function svelteSyntaxParser(filePath: string, encoding: BufferEncoding = "utf-8"): HTMLElement[] {
     const fileContent = readFileSync(filePath)
         .toString(encoding)
     const htmlParsed = parse(fileContent);
@@ -26,7 +26,7 @@ function svelteSyntaxParser(filePath: string, encoding: BufferEncoding = "utf-8"
  * Returns each encountered Svelte file as array with path to it
  * @param pathToCheck - Location which you'd like to check
  */
-function checkDir(pathToCheck: string): SvelteFilesList {
+export function checkDir(pathToCheck: string): SvelteFilesList {
     const srcDir = readdirSync(pathToCheck);
     let filesList: SvelteFilesList = []
 
