@@ -2,7 +2,7 @@
 
 (Purpose) Load page content only when necessary from server through REST API
 
-    1st: Analizes the all svelte code located in the customer project:
+    1st: Analizes the all svelte code located in the customer project (within "src" folder):
         - When in file is detected component named as: HyperLazy with attached content_id, plugin seeks file in directory: project_main/hyperlazy with exact same name
             - When don't exists durning build gonna be warning
     2nd: Creates http server to deliver through rest api the mentioned content_id by reading Svelte file
