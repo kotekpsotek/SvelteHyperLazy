@@ -1,10 +1,22 @@
 import { type Plugin, normalizePath } from "vite";
-import { readdirSync, lstatSync } from "fs";
+import { readdirSync, lstatSync, readFileSync } from "fs";
 import { join, extname } from "path";
+import { type HTMLElement, parse } from "node-html-parser";
 
 type SvelteFilesList = string[]
 
 // TODO: Check syntax by svelte syntax parser as function
+/**
+ * @param {string} filePath - the absolute location of svelte file
+ * Returns svelte file as abst
+*/
+function svelteSyntaxParser(filePath: string, encoding: BufferEncoding = "utf-8"): HTMLElement[] {
+    const fileContent = readFileSync(filePath)
+        .toString(encoding)
+    const htmlParsed = parse(fileContent);
+
+    return htmlParsed.getElementsByTagName("HyperLazy");
+}
 
 /**
  * Checks all units under path under condition if is:
@@ -48,6 +60,7 @@ export default function svelteHyperLazyPlugin(): Plugin<any> {
             const srcDir = join(dir, "src");
             const svelteFiles = checkDir(srcDir);
             console.log(svelteFiles)
+            svelteSyntaxParser(svelteFiles[0]);
 
             
             console.log("Build finished!")
